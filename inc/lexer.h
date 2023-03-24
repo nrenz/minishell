@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 22:16:50 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/03/24 13:44:44 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 14:22:00 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@
 # define EXPANSION 8	// $
 # define MINI_FILE 9	// .txt
 # define SPACE 10
+
+typedef struct s_global	t_global;
 
 typedef struct s_token
 {

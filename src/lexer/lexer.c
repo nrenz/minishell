@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:20:18 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/03/24 13:43:31 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 14:29:24 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	get_type_tok(t_token *token_arr)
 		if ((temp->str[0] >= 33 && temp->str[0] <= 59) ||
 		temp->str[0] == 61 || (temp->str[0] >= 63 && temp->str[0] <= 126))
 			temp->tok_type = 1;
-		else if (temp->str[0] == '|')
+		else if (temp->str[0] == '|' && ft_strlen(temp->str) == 1)
 			temp->tok_type = 2;
 		else if (temp->str[0] == '>' && ft_strlen(temp->str) == 1)
 			temp->tok_type = 3;
@@ -36,11 +36,11 @@ void	get_type_tok(t_token *token_arr)
 			temp->tok_type = 5;
 		else if (temp->str[0] == '\'' && ft_strlen(temp->str) == 1)
 			temp->tok_type = 6;
-		else if (temp->str[0] == '<<' && ft_strlen(temp->str) > 1)
+		else if (ft_strncmp(temp->str, "<<", 2) && ft_strlen(temp->str) == 2)
 			temp->tok_type = 7;
 		else if (temp->str[0] == '$' && ft_strlen(temp->str) == 1)
 			temp->tok_type = 8;
-		else if (temp->str[0] == '.txt' && ft_strlen(temp->str) == 4)
+		else if (ft_strncmp(temp->str, ".txt", 4) && ft_strlen(temp->str) == 4)
 			temp->tok_type = 9;
 		else
 			temp->tok_type = 10;

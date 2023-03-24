@@ -12,8 +12,8 @@ SRCS =	src/main.c\
 		src/envp.c\
 		src/expand.c\
 		src/lexer/lexer.c\
-		src/lexer/utils.c\
-		src/lexer/lexer_del.c\
+		src/lexer/lists.c\
+		src/lexer/lists_del.c\
 		src/built/ft_cd.c\
 		src/built/ft_pwd.c\
 		src/built/ft_env.c\
@@ -25,6 +25,7 @@ SRCS =	src/main.c\
 		src/built/built_utils2.c\
 		src/built/built_lexer_list.c\
 		src/parser/parser.c\
+		src/parser/pipex.c\
 		src/lexer/pipex.c\
 		src/utils/errors_utils.c\
 		src/utils/free_utils.c\
