@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:20:18 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/03/17 11:45:45 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 13:43:31 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,35 @@
 /* give type of token */
 void	get_type_tok(t_token *token_arr)
 {
-	while (token_arr->next != NULL)
+	t_token	*temp;
+
+	temp = token_arr;
+	printf("%s", token_arr->str);
+	while (temp != NULL)
 	{
-		if (token_arr->str[0] == '|' && ft_strlen(token_arr->str) == 1)
-			token_arr->tok_type = PIPE;
-		else if (token_arr->str[0] == '>' && ft_strlen(token_arr->str) == 1)
-			token_arr->tok_type = LESS_THAN;
-		else if (token_arr->str[0] == '<' && ft_strlen(token_arr->str) == 1)
-			token_arr->tok_type = GREATER_THAN;
-		else if (token_arr->str[0] == '>' && ft_strlen(token_arr->str) == 1)
-			token_arr->tok_type = LESS_THAN;
-		else if ((token_arr->str[0] >= 33 && token_arr->str[0] <= 59) ||
-		token_arr->str[0] == 61 ||
-				(token_arr->str[0] >= 63 && token_arr->str[0] <= 126))
-			token_arr->tok_type = WORD;
+		printf("%s", temp->str);
+		if ((temp->str[0] >= 33 && temp->str[0] <= 59) ||
+		temp->str[0] == 61 || (temp->str[0] >= 63 && temp->str[0] <= 126))
+			temp->tok_type = 1;
+		else if (temp->str[0] == '|')
+			temp->tok_type = 2;
+		else if (temp->str[0] == '>' && ft_strlen(temp->str) == 1)
+			temp->tok_type = 3;
+		else if (temp->str[0] == '<' && ft_strlen(temp->str) == 1)
+			temp->tok_type = 4;
+		else if (temp->str[0] == '"' && ft_strlen(temp->str) == 1)
+			temp->tok_type = 5;
+		else if (temp->str[0] == '\'' && ft_strlen(temp->str) == 1)
+			temp->tok_type = 6;
+		else if (temp->str[0] == '<<' && ft_strlen(temp->str) > 1)
+			temp->tok_type = 7;
+		else if (temp->str[0] == '$' && ft_strlen(temp->str) == 1)
+			temp->tok_type = 8;
+		else if (temp->str[0] == '.txt' && ft_strlen(temp->str) == 4)
+			temp->tok_type = 9;
 		else
-			token_arr->tok_type = SPACE;
-		token_arr = token_arr->next;
+			temp->tok_type = 10;
+		temp = temp->next;
 	}
 }
 

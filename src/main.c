@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:18:07 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/03/17 11:39:15 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 13:01:38 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	run_minishell_loop(t_global *minishell)
 void	init_global_struct(char **envp)
 {
 	t_global	*minishell;
-	
+
 	minishell = (t_global *)ft_calloc(1, sizeof(t_global));
 	minishell->lexer_list = NULL;
 	// hardcode
@@ -54,7 +54,7 @@ void	init_global_struct(char **envp)
 
 int	main(int argc, char **argv, char **envp)
 {
-	if(argc == 1 || argv[1])
+	if (argc == 1 || argv[1])
 	{
 		init_global_struct(envp);
 		printf("Welcome to Minishell!");
@@ -64,5 +64,5 @@ int	main(int argc, char **argv, char **envp)
 		printf("Minishell doesn't need arguments!");
 		exit(0);
 	}
-	return(0);
+	return (0);
 }

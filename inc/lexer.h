@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 22:16:50 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/03/17 11:44:42 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/03/24 13:44:44 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 /* Tokens types */
 # define WORD 1		   // "Hello World"
 # define PIPE 2		   // "|"
-# define SPACE 3		   // ' '
-# define GREATER_THAN 4 // <
-# define LESS_THAN 5	   // >
-# define QUOTES 6	   // " "
+# define GREATER_THAN 3 // >
+# define LESS_THAN 4	// <
+# define DOUBLE_QUOTE 5	// " "
+# define SINGLE_QUOTE 6	// ' '
 # define HEREDOC 7	   // <<
-# define EXPANSION 8	   //$
-# define MINI_FILE 9
+# define EXPANSION 8	// $
+# define MINI_FILE 9	// .txt
+# define SPACE 10
 
 typedef struct s_token
 {
