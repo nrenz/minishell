@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:53:06 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/03/17 11:44:27 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/11 12:57:44 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct s_simple_cmds
 /* t_token = t_lexer from example */
 typedef struct s_parser_list
 {
+	struct s_global	*global_struct;
 	struct s_global	*global;
 	t_token			*lexer_list;
 	t_token			*redirections;
