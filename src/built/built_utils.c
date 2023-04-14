@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 13:05:20 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/03/17 10:56:36 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/13 15:29:09 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	if_equal_sign(char *str)
 }
 
 /* This function prints a set of strings separated by spaces and
-a newline character at the end. 
+   a newline character at the end. 
 */
 void	lines_print(int i, char **str, int out)
 {

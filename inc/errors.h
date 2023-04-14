@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 10:55:23 by nrenz             #+#    #+#             */
-/*   Updated: 2023/03/17 10:55:25 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/13 12:05:27 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ enum	e_mini_errors
 
 /*					Functions list					*/
 
-void	*das_error(int error);
+int		das_error(int error);
 int		error_unset(t_simple_cmds *simple_cmd);
 int		error_export(char *c);
 

@@ -26,10 +26,10 @@ SRCS =	src/main.c\
 		src/built/built_lexer_list.c\
 		src/parser/parser.c\
 		src/parser/pipex.c\
-		src/lexer/pipex.c\
 		src/utils/errors_utils.c\
 		src/utils/free_utils.c\
 		src/utils/quotes_utils.c\
+		src/utils/utils.c\
 
 OBJS = $(SRCS:.c=.o)
 

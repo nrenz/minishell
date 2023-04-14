@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:18:07 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/03/24 13:01:38 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/13 12:16:25 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,17 @@ void	init_global_struct(char **envp)
 	run_minishell_loop(minishell);
 }
 
-int	main(int argc, char **argv, char **envp)
-{
-	if (argc == 1 || argv[1])
-	{
-		init_global_struct(envp);
-		printf("Welcome to Minishell!");
-	}
-	else
-	{
-		printf("Minishell doesn't need arguments!");
-		exit(0);
-	}
-	return (0);
-}
+// int	main(int argc, char **argv, char **envp)
+// {
+// 	if (argc == 1 || argv[1])
+// 	{
+// 		init_global_struct(envp);
+// 		printf("Welcome to Minishell!");
+// 	}
+// 	else
+// 	{
+// 		printf("Minishell doesn't need arguments!");
+// 		exit(0);
+// 	}
+// 	return (0);
+// }

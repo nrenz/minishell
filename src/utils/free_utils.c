@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ddzuba <ddzuba@student.42wolfsburg.de>     +#+  +:+       +#+        */
+/*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 13:13:15 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/03/03 13:24:48 by ddzuba           ###   ########.fr       */
+/*   Updated: 2023/04/13 12:29:07 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 /* Free everything from global structure */
 void	ft_free_global(t_global *global)
 {
+	printf("\nfree global check\n");
 	free(global->args);
 	free(global->pwd);
 	free(global->old_pwd);
 	free_arr(global->paths);
 	free_arr(global->envp);
-	ft_free_cmdlst(&global->simple_cmds);
-	if (global->pipes)
-		free(global->pipes);
+	ft_free_cmdlst(global->simple_cmds);
 }
 
 /* I'm not sure about this, but i hope it's work :) */
 void	ft_free_cmdlst(t_simple_cmds *simple_cmds)
 {
+	printf("\nfree cmdlst ckeck\n");
 	t_simple_cmds	*current;
 	t_simple_cmds	*next;
 
@@ -44,6 +44,7 @@ void	ft_free_cmdlst(t_simple_cmds *simple_cmds)
 /* Simply free the array of data */
 void	free_arr(char **arr)
 {
+	printf("\nfree array check\n");
 	int	i;
 
 	i = 0;

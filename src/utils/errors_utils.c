@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   errors_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yarutiun <yarutiun@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 19:44:42 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/03/05 16:01:03 by yarutiun         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:05:41 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/errors.h"
 
-int	das_error(int error) //, t_global *global this was a second argument
+int	das_error(int error) // t_global *global this was a second argument
 {
 	ft_putstr_fd("42minishell:", STDERR_FILENO);
 	if (error == QUOTE)

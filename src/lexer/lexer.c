@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:20:18 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/03/24 14:29:24 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/13 15:13:11 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	**split_arguments(char *string)
 	char	**tok_arr;
 
 	cutted_str = ft_strtrim(string, " ");
-	free(string);
+	// free(string);
 	string = cutted_str;
 	if (!string)
 	{
