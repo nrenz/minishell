@@ -30,6 +30,7 @@ SRCS =	src/main.c\
 		src/utils/free_utils.c\
 		src/utils/quotes_utils.c\
 		src/utils/utils.c\
+		src/utils/clean_up.c\
 
 OBJS = $(SRCS:.c=.o)
 

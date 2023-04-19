@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 10:54:54 by nrenz             #+#    #+#             */
-/*   Updated: 2023/03/17 10:54:56 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/19 14:33:52 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 # define UTILS_H
 # include "minishell.h"
 
-/*						Functions list						*/
+/*						Flags				*/
+# define CTRL_D_PRESSED 1
 
 /*						Built-in utils, unset				*/
 
@@ -57,5 +58,8 @@ void	free_arr(char **arr);
 
 int		input_quotes(char *input);
 char	*deleting_quotes(char *str, char c);
+
+/*						Ctrl D						*/
+void	clean_up(int clean_up_code);
 
 #endif

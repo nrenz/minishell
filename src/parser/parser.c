@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 20:11:19 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/04/19 11:25:53 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/19 14:13:57 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	parser(t_global *global_struct)
 	t_parser_list	parser_list;
 
 	global_struct->simple_cmds = NULL;
-	count_pipes(global_struct, global_struct->lexer_list); //why i don't see result?
+	count_pipes(global_struct, global_struct->lexer_list);
 	while (global_struct->lexer_list)
 	{
 		//do we need delete one node before creating?

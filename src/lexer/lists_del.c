@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 20:17:38 by ddzuba            #+#    #+#             */
-/*   Updated: 2023/04/13 15:13:49 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/19 14:12:06 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_token	*clear_one_list(t_token **lst)
 		free((*lst)->str);
 		(*lst)->str = NULL;
 	}
-	// free(*lst);
+	free(*lst);
 	*lst = NULL;
 	return (NULL);
 }
