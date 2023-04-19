@@ -6,12 +6,12 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:20:18 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/04/13 15:13:11 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/19 11:14:55 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/minishell.h"
-#include "../inc/parser.h"
+#include "../../inc/minishell.h"
+#include "../../inc/parser.h"
 
 /* give type of token */
 void	get_type_tok(t_token *token_arr)
@@ -55,7 +55,7 @@ char	**split_arguments(char *string)
 	char	**tok_arr;
 
 	cutted_str = ft_strtrim(string, " ");
-	// free(string);
+	free(string);
 	string = cutted_str;
 	if (!string)
 	{
@@ -72,10 +72,10 @@ char	**split_arguments(char *string)
 t_token	*lexer(t_global *global)
 {
 	char	**arguments;
-	// int	i;
+	int	i;
 	t_token *token_list;
 
-	// i = 0;
+	i = 0;
 	token_list = global->lexer_list;
 	arguments = split_arguments(global->args);
 	//test
@@ -85,12 +85,12 @@ t_token	*lexer(t_global *global)
 	// 	printf("\n");
 	// 	i++;
 	// }
-	if (!arguments)
-	{
-		printf("can't split arguments");
-	}
-	token_list = fill_stack_tokens(arguments, token_list);
-	get_type_tok(token_list);
+	// if (!arguments)
+	// {
+	// 	printf("can't split arguments");
+	// }
+	// token_list = fill_stack_tokens(arguments, token_list);
+	// get_type_tok(token_list);
 	//test
 	// while (token_list->next != NULL)
 	// {
