@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 14:13:16 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/03/17 11:00:31 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/27 11:25:34 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ t_token	*fill_stack_tokens(char **argv, t_token *token_list)
 		if (token_list == NULL)
 		{
 			token_list = create_new_list(argv[i], i);
-			// printf("%s, %d, %d", token_list->str, token_list->index, token_list->tok_type);
-			// printf("\n");
+			printf("%s, %d, %d", token_list->str, token_list->index, token_list->tok_type);
+			printf("\n");
 			++i;
 		}
 		else

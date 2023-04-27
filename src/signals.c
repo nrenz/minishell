@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_up.c                                         :+:      :+:    :+:   */
+/*   signals.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 14:30:00 by nrenz             #+#    #+#             */
-/*   Updated: 2023/04/19 15:38:49 by nrenz            ###   ########.fr       */
+/*   Created: 2023/04/19 15:49:09 by nrenz             #+#    #+#             */
+/*   Updated: 2023/04/19 15:53:34 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/utils.h"
+#include "../inc/minishell.h"
 
-void	clean_up(int clean_up_code)
+/*	SIGQUIT should do nothing */
+void	signal_handler(int sig, t_global *global, void *context)
 {
-	if (clean_up_code == CTRL_D_PRESSED) 
-		exit(0);
+	if (sig == SIGINT)
+		printf("Upps, did you hit Ctrl-C?\n");
+	(void) context;
+	(void) *global;
+	exit(0);
 }

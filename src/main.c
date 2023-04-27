@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:18:07 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/04/19 14:25:57 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/27 10:30:49 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	run_minishell_loop(t_global *minishell)
 {	
 	while (1)
 	{
-		minishell->args = readline("\nrenz_wagner_prompt: ");
+		minishell->args = readline("\nrenz_prompt: ");
 		if (minishell->args)
 			add_history(minishell->args);
 		if (!minishell->args)

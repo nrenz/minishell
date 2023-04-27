@@ -6,7 +6,7 @@
 /*   By: nrenz <nrenz@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:20:18 by hboichuk          #+#    #+#             */
-/*   Updated: 2023/04/19 11:14:55 by nrenz            ###   ########.fr       */
+/*   Updated: 2023/04/27 11:23:35 by nrenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	get_type_tok(t_token *token_arr)
 	t_token	*temp;
 
 	temp = token_arr;
-	printf("%s", token_arr->str);
+	// printf("%s", token_arr->str);
 	while (temp != NULL)
 	{
-		printf("%s", temp->str);
+		// printf("%s", temp->str);
 		if ((temp->str[0] >= 33 && temp->str[0] <= 59) ||
 		temp->str[0] == 61 || (temp->str[0] >= 63 && temp->str[0] <= 126))
 			temp->tok_type = 1;
